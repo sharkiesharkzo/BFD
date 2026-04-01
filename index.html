@@ -6,6 +6,26 @@
 <button onclick="window.location.href='https://sharkiesharkzo.github.io/episode1/';">
     Episode 1: Telescopic Termination <br> <img src="https://raw.githubusercontent.com/sharkiesharkzo/home/main/tt.png" alt="" width=200>
 </button>
-</button>
+<h>Episode Voting:</h>
+         <button onclick="embedSite()">Spoiler Warning</button>
+
+    <!-- Empty iframe initially -->
+    <iframe id="siteFrame" src="" title="Embedded Website"></iframe>
+
+    <script>
+        function embedSite() {
+            try {
+                // Change the URL to the site you want to embed
+                const url = "https://docs.google.com/forms/d/e/1FAIpQLSeFzQ-MHZbT5f4cpzrl9Rs2hXaHyVLunwYJMnCJ9rx5WXYGVA/viewform?usp=header";
+
+                // Set the iframe's src to the desired URL
+                document.getElementById("siteFrame").src = url;
+            } catch (error) {
+                console.error("Error embedding site:", error);
+                alert("Unable to load the website.");
+            }
+        }
+    </script>
+
 </body>
 </html>
